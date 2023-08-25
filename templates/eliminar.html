@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+    
+       
+    <form method = 'POST' action=""> 
+
+    {% csrf_token %}
+        <div style = "align-items: center; text-align: center; background-color:beige; " >
+            <div class="mb-3" style= "margin:10px">
+                <h1>Esta seguro que quiere eliminar el laboratorio: {{laboratorio.pk}}</h1> 
+            </div>
+            
+            <button type="submit" class="btn btn-danger">Confirmar</button>
+            <button type="button" class="btn btn-success"><a href="/">Volver</a></button>
+        </div>
+    </form>    
+{% endblock content %}

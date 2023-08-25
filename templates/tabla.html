@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+    
+<h1> DRILL 07</h1>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Pais</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in laboratorio%}
+            <tr>
+            <th scope="row">{{i.id}}</th>
+            <td>{{i.nombre}}</td>
+            <td>{{i.ciudad}}</td>
+            <td>{{i.pais}}</td>
+            <td><a href="/editar/{{i.pk}}">Editar</a></td>
+            <td><a href="/eliminar/{{i.pk}}">Eliminar</a></td>
+        </tr>
+        {% endfor%}
+        </tbody>
+    </table>
+
+
+
+
+
+
+<h1>Usted es la visita numero {{contador}}</h1>
+
+{% endblock content %}

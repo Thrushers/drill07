@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+    
+    <h1 style = "align-items: center; text-align: center;" >INGRESE LOS DATOS DEL NUEVO LABORATORIO</h1>
+    
+    <form method = 'POST'> 
+
+    {% csrf_token %}
+        <div style = "align-items: center; text-align: center; background-color:beige; " >
+            <div class="mb-3" style= "margin:10px">
+                <label for="exampleFormControlInput1" class="form-label">Nombre : </label>
+                <input type="text" class="form-control" placeholder="Ingrese el nombre" name="nombre">
+            </div>
+            
+            <div class="mb-3" style= "margin:10px">
+                <label for="exampleFormControlInput1" class="form-label">Ciudad : </label>
+                <input type="text" class="form-control" placeholder="Ingrese la Ciudad" name="ciudad">
+            </div>
+
+            <div class="mb-3" style= "margin:10px">
+                <label for="exampleFormControlInput1" class="form-label">Pais : </label>
+                <input type="text" class="form-control" placeholder="Ingrese el Pais" name="pais">
+            </div>
+
+            <button type="submit" class="btn btn-secondary">Enviar</button>
+        </div>
+    </form>    
+{% endblock content %}
+
